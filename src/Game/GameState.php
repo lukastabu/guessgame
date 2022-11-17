@@ -5,8 +5,8 @@ namespace App\Game;
 class GameState
 {
     public function __construct(
-        private array $secret;
-        private array $maskedWord;
+        private array $secret,
+        private array $maskedWord
         )
     {
     }

@@ -2,9 +2,9 @@
 
 namespace App\Player;
 
-use App\Interfaces\State;
+use App\Game\GameState;
 
 interface PlayerInterface
 {
-    public function guessLetter(State $state): string;
+    public function guessLetter(GameState $state): string;
 }

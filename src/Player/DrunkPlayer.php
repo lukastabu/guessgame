@@ -3,15 +3,21 @@
 namespace App\Player;
 
 use App\Game\GameState;
-use App\Interfaces\State;
 
 class DrunkPlayer implements PlayerInterface
 {
     public function guessLetter(GameState $state): string
     {
+        static $previousLetter;
         // TODO: Implement guessLetter() method.
-        $abc = "abcdefghijklmnopqrstxyuz";
-        $int = random_int(0, strlen($abc)-1);
-        return $abc[$int];
+       do {
+           $abc = "abcdefghijklmnopqrstvwxyuz";
+           $int = random_int(0, strlen($abc) - 1);
+           $letter = $abc[$int];
+       } while ($previousLetter === $letter);
+
+       $previousLetter = $letter;
+
+       return $letter;
     }
 }

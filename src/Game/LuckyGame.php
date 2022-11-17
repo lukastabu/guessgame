@@ -20,6 +20,7 @@ class LuckyGame implements GameInterface
         $this->players[] = $player;
     }
 
+
     public function makeTurn()
     {
         // TODO: Implement makeTurn() method.
