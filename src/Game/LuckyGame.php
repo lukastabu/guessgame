@@ -12,6 +12,10 @@ class LuckyGame implements GameInterface
 
     public function __construct(State $state = null)
     {
+        $words = [];
+        shuffle($words);
+        $secret = $words[0];
+
         $this->state = $state ?? new State();
     }
 
@@ -24,10 +28,12 @@ class LuckyGame implements GameInterface
     public function makeTurn()
     {
         // TODO: Implement makeTurn() method.
+        foreach ($this->players as $player)
     }
 
     public function isFinished()
     {
         // TODO: Implement isFinished() method.
+        return $this->state->isFinished();
     }
 }
