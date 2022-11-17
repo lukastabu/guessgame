@@ -1,11 +1,16 @@
 <?php
 
-namespace App\States;
+namespace App\Game;
 
 class GameState
 {
-    private string $secret;
-    private array $maskedWord;
+    public function __construct(
+        private array $secret;
+        private array $maskedWord;
+        )
+    {
+    }
+
 
     public function setMaskedWord($secret): array
     {

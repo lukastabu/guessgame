@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Interfaces;
+namespace App\Player;
+
+use App\Interfaces\State;
 
 interface PlayerInterface
 {

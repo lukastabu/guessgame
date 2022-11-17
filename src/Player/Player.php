@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace App\Player;
 
-use App\Interfaces\PlayerInterface;
-use App\States\GameState;
+use App\Models\PlayerInterfaceAlias;
+use App\Models\State;
 
 class Player implements PlayerInterfaceAlias
 {
